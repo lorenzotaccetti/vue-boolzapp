@@ -15,10 +15,47 @@
 
 </head>
 <body>
+    <!-- ROOT -->
     <div id="root">
-
+        <!-- App container -->
         <div class="app-container">
-            <div class="left-side"></div>
+            <!-- Colonna sinistra -->
+            <div class="left-side">
+                <!-- Riga profilo -->
+                <div class="profile-area">
+                    <div class="name-photo">
+                        <img class="avatar-img" src="img/avatar_io.jpg" alt="Foto profilo">
+                        <span>Nome Utente</span>
+                    </div>
+                    <div class="buttons">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- Riga notifiche -->
+                <div class="notifications-area">
+                    <div class="bell-slash">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="notifications-text">
+                        <p class="main-text">Ricevi notifiche di nuovi messaggi</p>
+                        <p class="underline-text">Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <!-- Riga ricerca contatti -->
+                <div class="contacts-search-area">
+                    <div class="inside-area">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat"> 
+                    </div>
+                </div>
+                <!-- Riga contatti -->
+                <div class="contacts-area"></div>
+            </div>
+            <!-- Colonna destra -->
             <div class="right-side"></div>
         </div>
 
