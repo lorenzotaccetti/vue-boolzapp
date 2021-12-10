@@ -13,8 +13,8 @@ body{
 
 /* COMMON */
 .avatar-img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -49,7 +49,6 @@ body{
 .right-side{
     width: calc(100% - 500px);
     height: 100%;
-    background-color: sandybrown;
 }
 
 /* Riga profilo */
@@ -60,6 +59,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-right: 1px solid #d9d9d9;
 }
 
 .profile-area .name-photo{
@@ -73,6 +73,7 @@ body{
 .profile-area .buttons{
     color: #b1b1b1;
     font-size: 20px;
+    margin-right: 20px;
 }
 
 .profile-area .buttons i{
@@ -154,14 +155,40 @@ body{
 .contacts-area li{
     padding: 35px 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
+    border-bottom:1px solid #e9ebea;
 }
 
 .contacts-area li:hover{
-    background-color: lightgray;
+    background-color: #e8ebeb;
 }
 
 .contacts-area li span{
     margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Riga profilo area chat */
+.profile-area .text-name{
+    margin-left: 20px;
+}
+.last-access{
+    font-size: 15px;
+    color: #8a9294;
+    font-weight: 400;
+}
+
+/* Area chat */
+.chat-area{
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 160px);
+}
+
+.chat-area .message-container{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    display: flex;
 }
