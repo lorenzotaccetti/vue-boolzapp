@@ -42,6 +42,7 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden
 }
 
 /* Colonna destra */
@@ -143,4 +144,24 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Riga contatti */
+.contacts-area ul{
+    list-style-type: none;
+}
+
+.contacts-area li{
+    padding: 35px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contacts-area li:hover{
+    background-color: lightgray;
+}
+
+.contacts-area li span{
+    margin-left: 20px;
 }
