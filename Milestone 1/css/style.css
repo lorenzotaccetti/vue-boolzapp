@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(0, #d5dbd9, #d5dbd9 50%, #eee 75%, #009688 75%);
+}
+
+#root{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-container{
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+}
+
+.left-side{
+    width: 400px;
+    height: 100%;
+    background-color: purple;
+}
+
+.right-side{
+    width: calc(100% - 400px);
+    height: 100%;
+    background-color: sandybrown;
+}
