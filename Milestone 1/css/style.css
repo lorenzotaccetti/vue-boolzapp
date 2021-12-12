@@ -18,6 +18,10 @@ body{
     border-radius: 50%;
 }
 
+ul{
+    list-style-type: none;
+}
+
 /* ROOT */
 #root{
     width: 100%;
@@ -189,22 +193,30 @@ body{
 .chat-area .message-container{
     width: 80%;
     margin: auto;
+}
+
+.chat-area .message-container ul{
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    flex-direction: column;
+    font-size: 20px;
 }
 
 .message-container .user-message{
     background-color: white;
     padding: 20px 60px 20px 10px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 10px;
+    max-width: 50%;
 }
 
 .message-container .my-message{
     background-color: #d5f9ba;
     padding: 20px 60px 20px 10px;
     border-radius: 10px;
+    margin-top: 10px;
+    max-width: 50%;
+    position: relative;
+    left: 450px;
 }
 
 /* Riga messaggi */
