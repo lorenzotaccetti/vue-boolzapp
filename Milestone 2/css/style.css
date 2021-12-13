@@ -1,0 +1,275 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    background: linear-gradient(0, #d5dbd9, #d5dbd9 50%, #eee 75%, #009688 75%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* COMMON */
+.avatar-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* ROOT */
+#root{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 950px;
+}
+
+/* App container */
+.app-container{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+}
+
+/* Colonna sinistra */
+.left-side{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+/* Colonna destra */
+.right-side{
+    width: calc(100% - 400px);
+    height: 100%;
+}
+
+/* Riga profilo */
+.profile-area{
+    background-color: #eaeaea;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid #d9d9d9;
+}
+
+.profile-area .name-photo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.profile-area .buttons{
+    color: #b1b1b1;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.profile-area .buttons i{
+    margin: 0 10px;
+}
+
+/* Riga notifiche */
+.notifications-area{
+    width: 100%;
+    height: 110px;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.notifications-area .bell-slash{
+    font-size: 23px;
+    color: #8edafc;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.notifications-area .main-text{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.notifications-area .underline-text{
+    color: #4f7484;
+    text-decoration: underline;
+}
+
+/* Riga ricerca contatti */
+.contacts-search-area{
+    width: 100%;
+    height: 55px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-search-area .inside-area{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    border: 1px solid #fafafa;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-search-area input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.contacts-search-area .search-icon{
+    color: #b6b9bc;
+    font-size: 16px;
+    background-color: white;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Riga contatti */
+.contacts-area{
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+.contacts-area ul{
+    list-style-type: none;
+}
+
+.contacts-area li{
+    padding: 35px 20px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    border-bottom:1px solid #e9ebea;
+}
+
+.contacts-area li:hover{
+    background-color: #e8ebeb;
+}
+
+.contacts-area li span{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Riga profilo area chat */
+.profile-area .text-name{
+    margin-left: 20px;
+}
+.last-access{
+    font-size: 15px;
+    color: #8a9294;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 990px) {
+    .right-side .profile-area i{
+        display: none;
+    }
+}
+
+/* Area chat */
+.chat-area{
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 160px);
+    overflow-y: scroll;
+}
+
+.chat-area .message-container{
+    width: 80%;
+    margin: auto;
+}
+
+.message-container .message{
+    font-size: 20px;
+    padding: 20px 60px 20px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 50%;
+    min-width: 35%;
+    display: inline-block;
+    position: relative;
+}
+
+.message-container .sent{
+    background-color: #d5f9ba;
+    float: right;
+    clear: both;
+}
+
+.message-container .received{
+    background-color: white;
+    float: left;
+    clear: both;
+}
+
+.chat-area .message-container li{
+    position: relative;
+}
+
+.chat-area .time-date{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    color: #c7cacb;
+}
+
+/* Riga messaggi */
+.message-area{
+    background-color: #f3eee9;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.message-area .icon{
+    color: #878d8f;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.message-area .input{
+    width: calc(100% - 140px);
+    height: 70%;
+}
+
+.message-area input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+}

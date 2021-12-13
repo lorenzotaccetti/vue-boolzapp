@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Web</title>
+
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+    <!-- ROOT -->
+    <div id="root">
+        <!-- App container -->
+        <div class="app-container">
+            <!-- Colonna sinistra -->
+            <div class="left-side">
+                <!-- Riga profilo -->
+                <div class="profile-area">
+                    <div class="name-photo">
+                        <img class="avatar-img" src="img/avatar_io.jpg" alt="Foto profilo">
+                        <span>Nome Utente</span>
+                    </div>
+                    <div class="buttons">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- Riga notifiche -->
+                <div class="notifications-area">
+                    <div class="bell-slash">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="notifications-text">
+                        <p class="main-text">Ricevi notifiche di nuovi messaggi</p>
+                        <p class="underline-text">Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <!-- Riga ricerca contatti -->
+                <div class="contacts-search-area">
+                    <div class="inside-area">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat"> 
+                    </div>
+                </div>
+                <!-- Riga contatti -->
+                <div class="contacts-area">
+                    <ul>
+                        <li @click="chatChanger(index)" v-for="(element, index) in contacts">
+                            <img class="avatar-img" :src="'img/avatar' + element.avatar + '.jpg'" :alt="element.name">
+                            <span>{{element.name}}</span> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Colonna destra -->
+            <div class="right-side">
+                <!-- Riga profilo -->
+                <div class="profile-area">
+                    <div class="name-photo">
+                        <img class="avatar-img" :src="'img/avatar' + contacts[currentActiveContact].avatar + '.jpg'" :alt="contacts[currentActiveContact].name">
+                        <div class="text-name">
+                            <p>{{contacts[currentActiveContact].name}}</p>
+                            <p class="last-access">Ultimo accesso oggi alle</p>
+                        </div>
+                    </div>
+                    <div class="buttons right-button">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- Chat -->
+                <div class="chat-area">
+                    <div class="message-container">
+                        <ul>
+                            <li v-for="(element, index) in contacts[currentActiveContact].messages" class="message" :class="element.status">
+                                <span>{{element.text}}</span>
+                                <div class="time-date">{{element.date}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Riga messaggi -->
+                <div class="message-area">
+                    <div class="icon">
+                        <i class="far fa-smile"></i>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Link JS -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Link Day.Js -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+</body>
+</html>
