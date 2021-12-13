@@ -55,7 +55,7 @@
                 <!-- Riga contatti -->
                 <div class="contacts-area">
                     <ul>
-                        <li v-if="element.visible" @click="chatChanger(index)" v-for="(element, index) in contacts">
+                        <li v-if="element.visible" @click="chatChanger(index)" v-for="(element, index) in contacts" :class="{ 'active': index === currentActiveContact} ">
                             <img class="avatar-img" :src="'img/avatar' + element.avatar + '.jpg'" :alt="element.name">
                             <span>{{element.name}}</span> 
                         </li>
