@@ -169,19 +169,36 @@ ul{
 .contacts-area li{
     padding: 35px 20px;
     display: flex;
-    align-items: flex-start;
     cursor: pointer;
     border-bottom:1px solid #e9ebea;
+    position: relative;
 }
 
 .contacts-area li:hover{
     background-color: #e8ebeb;
 }
 
-.contacts-area li span{
-    margin-left: 20px;
+.contacts-area .contact-name{
     font-size: 20px;
     font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.contacts-area .contact-chat{
+    margin-left: 20px;
+}
+
+.contacts-area .last-message{
+    color: #b7babc;
+    font-size: 12px;
+}
+
+.contacts-area .last-message-time{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #b7babc;
+    font-size: 12px;
 }
 
 /* Riga profilo area chat */
@@ -245,6 +262,38 @@ ul{
     right: 5px;
     font-size: 10px;
     color: #c7cacb;
+}
+
+.chat-area .down-arrow{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #c7cacb;
+    cursor: pointer;
+}
+
+.chat-area .option-box{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 200px;
+    height: 80px;
+    background-color: white;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #747373;
+}
+
+.chat-area .option-box div{
+    cursor: pointer;
+    padding: 10px 0;
 }
 
 /* Riga messaggi */

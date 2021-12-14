@@ -62,7 +62,11 @@
                             :class="{ 'active': index === currentActiveContact}"
                         >
                             <img class="avatar-img" :src="'img/avatar' + element.avatar + '.jpg'" :alt="element.name">
-                            <span>{{element.name}}</span> 
+                            <div class="contact-chat">
+                                <div class="contact-name">{{element.name}}</div> 
+                                <div class="last-message">{{contacts[index].messages[element.messages.length - 1].text}} ...</div>
+                            </div>
+                            <div class="last-message-time">{{element.messages[element.messages.length - 1].date}}</div>
                         </li>
                     </ul>
                 </div>
@@ -91,6 +95,11 @@
                             <li v-for="(element, index) in contacts[currentActiveContact].messages" class="message" :class="element.status">
                                 <span>{{element.text}}</span>
                                 <div class="time-date">{{element.date}}</div>
+                                <i @click="openOptionFunction(index)" class="fas fa-angle-down down-arrow"></i>
+                                <div v-if="element.info === true" class="option-box">
+                                    <div>Message Info</div>
+                                    <div @click="deleteMessage(index)">Delete Message</div>
+                                </div>
                             </li>
                         </ul>
                     </div>
