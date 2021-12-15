@@ -116,7 +116,8 @@ const app = new Vue({
                 this.contacts[this.currentActiveContact].messages.push({
                     date: dayjs().format('DD/MM/YYYY' + ' ' + 'HH:mm:ss'),
                     text: this.sentMessage,
-                    status: 'sent'
+                    status: 'sent',
+                    info: false
                 });
                 this.sentMessage = '';
                 setTimeout(this.replyMessage,2000)
@@ -126,7 +127,8 @@ const app = new Vue({
             this.contacts[this.currentActiveContact].messages.push({
                 date: dayjs().format('DD/MM/YYYY' + ' ' + 'HH:mm:ss'),
                 text: 'ok',
-                status: 'received'
+                status: 'received',
+                info: false
             });
         },
         textFilter: function(){
