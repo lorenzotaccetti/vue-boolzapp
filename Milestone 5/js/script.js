@@ -9,6 +9,7 @@ const app = new Vue({
         currentActiveContact: 0,
         sentMessage: '',
         searchingContact: '',
+        currentActiveMessage: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -140,12 +141,14 @@ const app = new Vue({
         openOptionFunction: function(index){
             if (this.contacts[this.currentActiveContact].messages[index].info === false){
                 this.contacts[this.currentActiveContact].messages[index].info = !this.contacts[this.currentActiveContact].messages[index].info;
+                this.currentActiveMessage = index;
             } else if(this.contacts[this.currentActiveContact].messages[index].info === true){
                 this.contacts[this.currentActiveContact].messages[index].info = !this.contacts[this.currentActiveContact].messages[index].info;
             }
         },
         deleteMessage: function(index){
-            this.contacts[this.currentActiveContact].messages.splice(index, 1)
+            this.contacts[this.currentActiveContact].messages.splice(index, 1);
+            this.contacts[this.currentActiveContact].messages[index].info = !this.contacts[this.currentActiveContact].messages[index].info;
         }    
     }
 });
