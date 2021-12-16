@@ -96,7 +96,7 @@
                                 <span>{{element.text}}</span>
                                 <div class="time-date">{{element.date}}</div>
                                 <i @click="openOptionFunction(index)" class="fas fa-angle-down down-arrow"></i>
-                                <div v-if="element.info === true && currentActiveMessage === index" class="option-box">
+                                <div v-if="currentActiveMessage === index" class="option-box">
                                     <div>Message Info</div>
                                     <div @click="deleteMessage(index)">Delete Message</div>
                                 </div>
