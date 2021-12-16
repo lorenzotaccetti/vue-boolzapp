@@ -271,8 +271,12 @@ ul{
     font-size: 20px;
     color: #c7cacb;
     cursor: pointer;
+    display: none;
 }
 
+.chat-area li:hover .down-arrow{
+    display: block;
+}
 .chat-area .option-box{
     position: absolute;
     top: 40px;

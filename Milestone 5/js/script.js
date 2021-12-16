@@ -128,7 +128,7 @@ const app = new Vue({
                 date: dayjs().format('DD/MM/YYYY' + ' ' + 'HH:mm:ss'),
                 text: 'ok',
                 status: 'received',
-                info: false
+                info: true
             });
         },
         textFilter: function(){
@@ -151,6 +151,14 @@ const app = new Vue({
         deleteMessage: function(index){
             this.contacts[this.currentActiveContact].messages.splice(index, 1);
             this.contacts[this.currentActiveContact].messages[index].info = !this.contacts[this.currentActiveContact].messages[index].info;
-        }    
+        },
+        lastMessage: function(element, index){
+            let str = this.contacts[index].messages[element.messages.length - 1].text.slice(0, 20);
+            if (this.contacts[index].messages[element.messages.length - 1].text.length > 20){
+                return str + '...';
+            } else{
+                return str
+            }
+        }   
     }
 });

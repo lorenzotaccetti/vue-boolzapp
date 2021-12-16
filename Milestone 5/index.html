@@ -64,7 +64,7 @@
                             <img class="avatar-img" :src="'img/avatar' + element.avatar + '.jpg'" :alt="element.name">
                             <div class="contact-chat">
                                 <div class="contact-name">{{element.name}}</div> 
-                                <div class="last-message">{{contacts[index].messages[element.messages.length - 1].text}} ...</div>
+                                <div class="last-message">{{lastMessage(element, index)}}</div>
                             </div>
                             <div class="last-message-time">{{element.messages[element.messages.length - 1].date}}</div>
                         </li>
